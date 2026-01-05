@@ -1,0 +1,306 @@
+/* =========================
+   GLOBAL
+========================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f4f6f7;
+  color:#fff;
+  font-size:14px;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* =========================
+   NAVBAR (SAMA BERANDA)
+========================= */
+.topbar{
+  background:#0b3c5d;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.topbar .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+.topbar a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+}
+
+.logo{
+  font-family:'Poppins', sans-serif;
+  font-weight:700;
+}
+
+/* =========================
+   HERO GLOBAL
+========================= */
+.hero{
+  background-image:url('gambarawal.jpg');
+  background-size:cover;
+  background-position:center;
+  height:360px;
+  position:relative;
+}
+
+.materi-hero{
+  background-image:url('materiii.jpg');
+  height:280px;
+}
+
+.hero-overlay{
+  background:rgba(0,0,0,.45);
+  height:100%;
+}
+
+/* =========================
+   HERO BERANDA
+========================= */
+.home .hero-overlay{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.home .hero-content{
+  text-align:center;
+}
+
+.home .hero-content h1{
+  font-family:'Poppins', sans-serif;
+  font-size:46px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.home .hero-content p{
+  font-size:20px;
+  font-weight:600;
+  color:#f1c40f;
+}
+
+/* =========================
+   HERO MATERI (FINAL FIX)
+========================= */
+.materi-page .hero-overlay{
+  display:flex;
+  align-items:flex-end;
+}
+
+.materi-page .hero-overlay .container{
+  padding-bottom:40px;
+}
+
+.materi-page .hero-content{
+  color:#fff;
+}
+
+.materi-page .hero-content h1{
+  font-family:'Poppins', sans-serif;
+  font-size:36px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.materi-page .hero-content p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* =========================
+   BERANDA CARD
+========================= */
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-bottom:60px;
+}
+
+.news-card{
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  transition:.25s;
+}
+
+.news-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.news-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.news-content{
+  padding:15px;
+}
+
+.news-content h3,
+.news-content h4{
+  font-family:'Poppins', sans-serif;
+  font-size:16px;
+  font-weight:600;
+  color:#0b3c5d;
+}
+
+.news-content p{
+  font-size:14px;
+}
+
+.news-content a{
+  display:inline-block;
+  margin-top:8px;
+  background:#0b3c5d;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:4px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.news-content a:hover{
+  background:#f1c40f;
+  color:#0b3c5d;
+}
+
+/* =========================
+   MATERI CARD
+========================= */
+.materi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.materi-card{
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  padding:25px;
+  transition:.25s;
+}
+
+.materi-card:hover{
+  transform:translateY(-5px);
+}
+
+.materi-card h3{
+  font-family:'Poppins', sans-serif;
+  color:#0b3c5d;
+}
+
+.materi-card p{
+  font-size:14px;
+}
+
+.materi-card a{
+  display:inline-block;
+  margin-top:10px;
+  background:#0b3c5d;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:4px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.materi-card a:hover{
+  background:#f1c40f;
+  color:#0b3c5d;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  background:#0b3c5d;
+  color:#fff;
+  text-align:center;
+  padding:20px 0;
+  margin-top:40px;
+}/* =========================
+   FIX HERO BERANDA (SEJAJAR NAVBAR)
+========================= */
+
+/* Hero overlay pakai flex dan sejajar kiri */
+.home .hero-overlay{
+  display: flex;
+  align-items: center;
+}
+
+/* Hero content ikut container navbar */
+.home .hero-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 0;
+  text-align: left;
+}
+
+/* Judul hero */
+.home .hero-content h1{
+  font-size: 46px;
+  font-weight: 700;
+}
+
+/* Subjudul hero */
+.home .hero-content p{
+  font-size: 20px;
+  font-weight: 600;
+  color: #f1c40f;
+}
+
+/* =========================
+   JARAK RILIS MATERI DARI HERO
+========================= */
+.home main.container{
+  margin-top: 60px;
+}
+
+/* Judul Rilis Materi lebih rapi */
+/* RILIS MATERI - CLEAN */
+.section-title{
+  margin-bottom: 40px;
+}
+
+.section-title h2{
+  font-family:'Poppins', sans-serif;
+  font-size:28px;
+  font-weight:600;
+  color:#0b3c5d;
+  position:relative;
+  padding-bottom:10px;
+}
+
+/* garis tipis di bawah judul */
+.section-title h2::after{
+  content:'';
+  width:60px;
+  height:4px;
+  background:#f1c40f;
+  position:absolute;
+  left:0;
+  bottom:0;
+  border-radius:2px;
+}
